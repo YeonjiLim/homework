@@ -17,13 +17,13 @@ public class Solution1233 {
 			for(int i = 1; i < n+1; i++) {
 				String[] s = br.readLine().split(" ");
 				if(isM) {
-					if(s.length % 2 == 1) { // 어떤경우에도 배열길이가 3이면 자식노드1개라 수식이 될수 없음
+					if(s.length % 2 == 1) {
 						isM = false;
 					}
-					if(s.length > 2 && !sign.contains(s[1])) { // s배열길이가 2보다 긴데 노드의 값이 숫자일때 - X
+					if(s.length > 2 && !sign.contains(s[1])) {
 						isM = false;
 					}
-					if(s.length == 2 && sign.contains(s[1])) { // s배열길이가 2인데 숫자가 아닐때
+					if(s.length == 2 && sign.contains(s[1])) {
 						isM = false;
 					}
 				}
