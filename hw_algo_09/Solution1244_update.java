@@ -55,11 +55,7 @@ public class Solution1244_update {
 			}
 			count = 0;
 			int last = 0;
-			int size = compare;
-			if(size > arr.length) {
-				size = arr.length;
-			}
-			for(int i = 0; i < size-1; i++) {
+			for(int i = 0; i < arr.length-1; i++) {
 				if(arr[i] == arr[i+1]) {
 					count++;
 					last = i+1;
