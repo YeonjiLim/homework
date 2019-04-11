@@ -1,0 +1,22 @@
+CREATE TABLE `product` (
+  `code` char(8) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `price` varchar(10) NOT NULL,
+  PRIMARY KEY (`code`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO product(code,name,price) values ('Q1W2E3','냉장고',8000000);
+INSERT INTO product(code,name,price) values ('R4T5Y6','에어컨',3000000);
+INSERT INTO product(code,name,price) values ('U7I8O9','김치냉장고',5000000);
+INSERT INTO product(code,name,price) values ('1Q2W3E','선풍기',350000);
+INSERT INTO product(code,name,price) values ('4R5T6Y','TV',12400000);
+INSERT INTO product(code,name,price) values ('7U8I9O','노트북',1200000);
+
+UPDATE product SET price=price*0.85;
+SELECT * FROM product;
+
+UPDATE product SET price=price*0.8
+WHERE name LIKE '%TV%';
+SELECT * FROM product;
+
+SELECT SUM(price) FROM product;
